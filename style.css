@@ -1,0 +1,90 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+.nav{
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-row: .5fr;
+    font-weight: 500;
+}
+.nav .nav_in{
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 10px;
+}
+.nav_in:nth-child(n+1):nth-child(-n+4){
+    border-right: 3px solid black;
+}
+.section{
+    height: 120vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(500px,1fr) );
+    grid-template-rows: repeat(auto-fit,minmax(330px,.4fr));
+}
+.section .section_part{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 3px solid black;
+    position: relative;
+}
+
+.section .section_part:nth-child(2){
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+.section .section_part:nth-child(5){
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+.section .section_part:nth-child(8){
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+.section .section_part .first{
+    display: flex;
+    justify-content: space-between;
+}
+.section .section_part .footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.section .section_part .photo_part{
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 70%;
+    height: 70%;
+    display: flex;
+}
+
+.section .section_part .photo_part .photo_1{
+    width: 50%;
+    height: 100%;
+    margin-left: 5px;
+}
+
+.section .section_part img{
+    width: 100%;
+    height: 100%;
+}
+.section .section_part .photo{
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 70%;
+    height: 70%;
+}
+
+.section .section_part .footer span:nth-child(2){
+    text-decoration: underline;
+}
